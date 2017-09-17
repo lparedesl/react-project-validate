@@ -1,5 +1,5 @@
 const path = require('path');
-const glob = require('glob')
+const glob = require('glob');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
     merge = require('webpack-merge'),
@@ -22,6 +22,7 @@ const mainConfig = merge([
         plugins: [
             new HtmlWebpackPlugin({
                 title: 'Webpack demo',
+                template: `${PATHS.app}/index.hbs`
             }),
         ],
     },

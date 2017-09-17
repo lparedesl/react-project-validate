@@ -7,7 +7,7 @@ import Footer from './footer';
 export default class Layout extends React.Component {
     render() {
         return (
-            <div>
+            <div className="site">
                 <Header/>
                 <Landing/>
                 <Footer/>

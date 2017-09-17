@@ -36,7 +36,7 @@ body {
  * Add the correct display in IE 9-.
  */
 
-footer,header {
+aside,footer,header,nav {
   display: block;
 }
 
@@ -71,6 +71,16 @@ main {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -110,9 +120,17 @@ a:active,a:hover {
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 
+strong {
+  font-weight: inherit;
+}
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
+
+strong {
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -151,9 +169,17 @@ a:active,a:hover {
  * Remove the border on images inside links in IE 10-.
  */
 
+img {
+  border-style: none;
+}
+
 /**
  * Hide the overflow in IE.
  */
+
+svg:not(:root) {
+  overflow: hidden;
+}
 
 /* Forms
    ========================================================================== */
@@ -163,15 +189,36 @@ a:active,a:hover {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+button,input {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
 
+button,input {
+  /* 1 */
+  overflow: visible;
+}
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
+
+button {
+  /* 1 */
+  text-transform: none;
+}
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -179,7 +226,7 @@ a:active,a:hover {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 
-html [type="button"],[type="reset"],[type="submit"] {
+button,html [type="button"],[type="reset"],[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
 }
@@ -188,7 +235,7 @@ html [type="button"],[type="reset"],[type="submit"] {
  * Remove the inner border and padding in Firefox.
  */
 
-[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -197,7 +244,7 @@ html [type="button"],[type="reset"],[type="submit"] {
  * Restore the focus styles unset by the previous rule.
  */
 
-[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring {
+button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -282,6 +329,10 @@ html [type="button"],[type="reset"],[type="submit"] {
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
 
+menu {
+  display: block;
+}
+
 /*
  * Add the correct display in all browsers.
  */
@@ -330,40 +381,274 @@ html {
  */
 
 a {
-  color: #2891CB;
+  color: #083d8c;
   text-decoration: none;
 }
 
 a:hover,a:active,a:focus {
-  color: #333;
+  color: #3f3f3f;
   text-decoration: underline;
 }
 
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+General styles
+--------------------------------------------------------------*/
+
+.masthead .company-logo {
+  margin: 1.5em 1em 0;
+}
+
+.masthead .pool-pro-form {
+  text-align: center;
+}
+
+.main-nav .menu-icon {
+  /*background: url(../assets/menu-icon-mobile.png) center;*/
+  background-size: 50px;
+  display: hidden;
+  height: 51px;
+  position: relative;
+  top: 21px;
+  width: 51px;
+}
+
+.main-nav a:hover#menu-icon {
+  background-color: #444444;
+  border-radius: border-radius(4px);
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav ul li {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+  background: #f6f6f6;
+  border-bottom: 2px solid #FFF;
+}
+
+.main-nav ul li:last-child {
+  border-bottom: 0;
+}
+
+.main-nav ul li:last-child a:hover,.main-nav ul li:last-child a:focus {
+  background: #f6f6f6;
+  border-top: 1px solid #083d8c;
+}
+
+.banner .hero {
+  /*background-image: url("../assets/Hero-image-mobile.png");*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+}
+
+.banner .steps svg {
+  position: relative;
+  top: 13px;
+}
+
+.banner .steps .water-divide {
+  /*background-image: url("../assets/water-image.png");*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.sidebar {
+  background-color: #f6f6f6;
+  padding: 2em;
+}
+
+.main-content {
+  padding: 1em 2em;
+}
+
+.main-content .list-result {
+  border: 1px solid #f6f6f6;
+  border-radius: border-radius(4px);
+  margin: 1em 0;
+  text-align: center;
+  -webkit-box-shadow: box-shadow(0px 2px 5px 1px #bdbdbd);
+  box-shadow: box-shadow(0px 2px 5px 1px #bdbdbd);
+}
+
+.main-content .list-result hr {
+  border: 0;
+  height: 1px;
+  background: #e5e5e5;
+  width: 85%;
+}
+
+.main-content .list-result .list-footer {
+  background-color: #f6f6f6;
+  padding: 1em;
+}
+
+.colophon .footer-base {
+  background-color: #083d8c;
+  padding: 2em;
+}
+
+.colophon .footer-base img {
+  max-height: 52px;
+  margin: 1em 1em 0;
+  max-width: 376px;
+}
+
+.colophon .footer-base .social li {
+  display: inline-block;
+}
+
+.colophon .footer-bottom-links {
+  background-color: #216ddf;
+  text-align: center;
+  padding: 1em;
+}
+
 body {
-  background: cornsilk;
+  color: #3f3f3f;
+  font: normal 110%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+a,button,input {
+  color: #216ddf;
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration: none;
 }
 
 h1 {
-  color: #444;
-  font-family: "Helvetica", sans-serif;
-  font-size: 32px;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
-div > div {
-  border: 1px solid #444;
-}
-
-div > div {
-  border-color: #AAA;
-  border-radius: 5px;
-  margin: 0 auto;
+ol,ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  width: 62.5%;
 }
 
-body {
-  color: #333;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+img {
+  border-style: none;
+  vertical-align: middle;
+  display: block;
+}
+
+.masthead .pool-pro-form a {
+  border: 1.5px solid #083d8c;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  margin: .5em 0;
+  padding: .5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.masthead .pool-pro-form a .fa-map-marker {
+  font-size: 22px;
+  margin-right: .2em;
+}
+
+.banner h2,.banner h3 {
+  color: #083d8c;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.main-content .list-result .pool-pro-name {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 1em .5em;
+  line-height: normal;
+}
+
+.main-content .list-result .pool-pro-phone {
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.main-content .list-result a.pro-email {
+  border: 1.5px solid #46D6D6;
+  border-radius: 3px;
+  display: inline-block;
+  margin: .5em 0;
+  padding: .5em 1em;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.main-content .list-result a.pro-email .fa-envelope {
+  padding-right: .6em;
+}
+
+.main-content .list-result ol li {
+  margin-bottom: .4em;
+  font-weight: 300;
+}
+
+.main-content .list-result .list-footer .left-type-service,.main-content .list-result .list-footer .right-type-service {
+  text-align: left;
+  margin: 0 auto;
+  color: #9E9E9E;
+}
+
+.colophon .footer-base .social li {
+  color: #FFF;
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+  padding: 0 1em;
+}
+
+.colophon .footer-base .social a {
+  color: #FFF;
+  font-family: 14px;
+  text-transform: uppercase;
+}
+
+.colophon .footer-bottom-links a {
+  color: #FFFFFF;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+.colophon .footer-bottom-links span {
+  padding: 0 1em;
+  color: #FFF;
 }
 
 /**
@@ -378,7 +663,7 @@ body {
  */
 
 .container {
-  max-width: 1180px;
+  max-width: 1460px;
   /* 1 */
   margin-left: auto;
   /* 2 */
@@ -403,3 +688,170 @@ body {
  * Shamelessly borrowed from HTML5Boilerplate:
  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
  */
+
+/*--------------------------------------------------------------
+Media Query styles
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 639px) {
+  .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  nav ul,  nav:active ul {
+    display: none;
+    position: absolute;
+    padding: 0;
+    background: #fff;
+    border: 2.3px solid #46D6D6;
+    right: 0;
+    top: 60px;
+    border-radius: 4px;
+    z-index: 10;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+
+  .main-content {
+    padding: 1em .8em;
+  }
+
+  .steps div {
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .steps div:last-child {
+    border-bottom: 0;
+  }
+
+  .pool-pro-phone {
+    background-color: #216ddf;
+    border-radius: 4px;
+    color: #FFF;
+    padding: .3em;
+    margin: .5em;
+  }
+
+  .fa-phone {
+    background-color: #083d8c;
+    border-radius: 3px;
+    color: #FFF;
+    padding: .3em;
+  }
+
+  .mobile-call {
+    font-size: 12px;
+    color: #FFF;
+  }
+
+  .footer-base img {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .main-nav button {
+    display: none;
+  }
+
+  .hero {
+    /*background-image: url("../assets/hero-image.png");*/
+    min-height: 393px;
+  }
+
+  .pool-pro-phone {
+    background-color: #FFF;
+    color: #3f3f3f;
+    padding: .3em;
+    margin: .5em;
+  }
+
+  .fa-phone {
+    background-color: #216ddf;
+    border-radius: 25px;
+    color: #FFF;
+    font-size: 20px;
+    padding: .3em;
+    margin-right: .5em;
+  }
+
+  .mobile-call {
+    display: none;
+  }
+
+  .footer-base img {
+    margin: 0;
+  }
+
+  .footer-base img,  .social {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@supports (display: grid) {
+  .company-logo {
+    grid-area: logo;
+  }
+
+  .pool-pro-form {
+    grid-area: form;
+  }
+
+  .main-nav {
+    grid-area: nav;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: 35% auto;
+  }
+
+  .list-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+@media screen and (max-width: 639px) {
+    .site {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .masthead-subgrid {
+      display: grid;
+      grid-template-columns: 48.5% 37.5% 14%;
+      grid-template-areas: 'logo form nav';
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .site {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .masthead-subgrid {
+      display: grid;
+      grid-template-columns: 48.5% 37.5% 14%;
+      grid-template-areas: 'logo nav form';
+    }
+}
+}

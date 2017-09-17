@@ -18,7 +18,7 @@ exports.purifyCSS = ({paths}) => ({
     plugins : [
         new PurifyCSSPlugin({ paths })
     ],
-})
+});
 
 exports.autoprefix = () => ({
     loader: 'postcss-loader',
@@ -54,7 +54,7 @@ exports.extractCSS = ({include, exclude, use}) => {
                     use,
                     fallback: 'style-loader',
                 }),
-            },]
+            }]
         },
         plugins: [plugin],
     };

@@ -3,18 +3,18 @@ import React from 'react';
 export default class Banner extends React.Component {
     render() {
         return (
-            <div class="banner banner-subgrid">
-                <div class="hero">
+            <div className="banner banner-subgrid">
+                <div className="hero">
                     <h2>Is your pool ready for the summer?</h2>
                     <h5>A pool pro is ready to help</h5>
-                    <hr class="short-divider"/>
+                    <hr className="short-divider"/>
                     <p>Choose a pro close to home from the list below</p>
                 </div>
                 
                 {/* Need to fix SVG recognition */}
                 {/*
-                <div class="steps steps-subgrid">
-                    <div class="step1">
+                <div className="steps steps-subgrid">
+                    <div className="step1">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 40 40" width="40" height="40">
                             <g>
@@ -25,7 +25,7 @@ export default class Banner extends React.Component {
                         </svg>
                         <h3>Choose A Pro</h3>
                     </div>
-                    <div class="step2">
+                    <div className="step2">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 40 40" width="40" height="40">
                             <g>
@@ -36,7 +36,7 @@ export default class Banner extends React.Component {
                         </svg>
                         <h3>Contact A Pro</h3>
                     </div>
-                    <div class="step3">
+                    <div className="step3">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 40 40" width="40" height="40">
                             <g>
@@ -50,7 +50,7 @@ export default class Banner extends React.Component {
                 </div>
                 */}
                 
-                <div class="water-divide" aria-hidden="true"></div>
+                <div className="water-divide" aria-hidden="true"></div>
             </div>
         );
     }
