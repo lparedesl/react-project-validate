@@ -1,0 +1,147 @@
+body {
+  color: $text-color;
+  font: normal 110% / 1.4 $text-font-stack;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    color: $secondary-brand-color;
+    font-family: $font-stack;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+    
+h1{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+    display: block;    
+}
+
+.masthead {
+    
+    .pool-pro-form a {
+        border: 1.5px solid $brand-color;
+        border-radius: 3px;
+        display: inline-block;
+        font-weight: bold;
+        font-family: $text-font-stack;
+        font-size: 16px;
+        margin: .5em 0;
+        padding: .5em;
+        text-transform: uppercase;
+        text-decoration: none;
+        vertical-align: middle;
+        
+        .fa-map-marker {
+            font-size: 22px;
+            margin-right: .2em;
+        }
+    }
+    
+}
+.banner {
+    
+    h2, h3 {
+        color: $brand-color;
+        margin: 0;
+        padding: 1em 0;
+    }
+}
+
+.main-content {
+    
+    .list-result {
+        .pool-pro-name {
+            font-size: 26px;
+            font-weight: 400;
+            margin: 1em .5em;
+            line-height: normal;
+        }
+        .pool-pro-phone {
+            font-family: $text-font-stack;
+            font-size: 26px;
+            font-weight: 400;
+        }
+        a.pro-email {
+            border: 1.5px solid #46D6D6;
+            border-radius: 3px;
+            display: inline-block;
+            margin: .5em 0;
+            padding: .5em 1em;
+            text-decoration: none;
+            vertical-align: middle;
+            
+            .fa-envelope {
+                padding-right: .6em
+            }
+        }
+        ol {
+            
+            li{
+                margin-bottom: .4em;
+                font-weight: 300;
+            }
+        }
+        
+        .list-footer {
+            .left-type-service, .right-type-service {
+                text-align: left;
+                margin: 0 auto;
+                color: #9E9E9E;
+            }
+        }
+    } 
+}
+
+.colophon {
+    .footer-base {
+        .social {
+            li{
+                color: #FFF;
+                font-family: $text-font-stack;
+                text-transform: uppercase;
+                padding: 0 1em;
+            }
+            a {
+                color: #FFF;
+                font-family: 14px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .footer-bottom-links {
+        
+        a {
+            color: #FFFFFF;
+            font-size: 11px;
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+        }
+        span {
+            padding: 0 1em;
+            color: #FFF;
+        }
+    }
+}

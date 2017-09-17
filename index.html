@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Grid Play</title>
+    <meta name="description" content="Just a CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="site">
+
+        <header class="masthead masthead-subgrid">
+            <div class="company-logo">
+                <a href="#">
+                    <img src="assets/pool-pros-logo.png" alt="Pool Pros logo" title="Pool Pros">
+                    <h1 class="screen-reader-text">Pool Pro app</h1>
+                </a>
+            </div>
+            <div class="pool-pro-form">
+                <a class="find-pro" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Find A Pro</a>
+            </div>
+            <nav class="main-nav" role="navigation">
+               <button class="menu-icon" aria-expanded="false" aria-controls="menu"></button>
+                <ul>
+                    <li><a href="#">Pools &amp; Spas</a></li>
+                    <li><a href="#">Supplies</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- .masthead -->
+
+        <div class="banner banner-subgrid">
+            <div class="hero">
+                <h2>Is your pool ready for the summer?</h2>
+                <h5>A pool pro is ready to help</h5>
+                <hr class="short-divider">
+                <p>Choose a pro close to home from the list below</p>
+            </div>
+            <div class="steps steps-subgrid">
+                <div class="step1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 40 40" width="40" height="40">
+                        <g>
+                            <circle style="fill:url(#toning);stroke:#083D8C;stroke-width:3;stroke-miterlimit:10;" cx="20" cy="20" r="18">
+                            </circle>
+                            <text x="50%" y="50%" text-anchor="middle" stroke="#46D6D6" stroke-width="2px" dy=".3em">1</text>
+                        </g>
+                    </svg>
+                    <h3>Choose A Pro</h3>
+                </div>
+                <div class="step2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 40 40" width="40" height="40">
+                        <g>
+                            <circle style="fill:url(#toning);stroke:#083D8C;stroke-width:3;stroke-miterlimit:10;" cx="20" cy="20" r="18">
+                            </circle>
+                            <text x="50%" y="50%" text-anchor="middle" stroke="#46D6D6" stroke-width="2px" dy=".3em">2</text>
+                        </g>
+                    </svg>
+                    <h3>Contact A Pro</h3>
+                </div>
+                <div class="step3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 40 40" width="40" height="40">
+                        <g>
+                            <circle style="fill:url(#toning);stroke:#083D8C;stroke-width:3;stroke-miterlimit:10;" cx="20" cy="20" r="18">
+                            </circle>
+                            <text x="50%" y="50%" text-anchor="middle" stroke="#46D6D6" stroke-width="2px" dy=".3em">3</text>
+                        </g>
+                    </svg>
+                    <h3>A Pro Visits</h3>
+                </div>
+            </div>
+            <div class="water-divide" aria-hidden="true"></div>
+        </div>
+        
+        <aside class="sidebar">
+            <div class="pro-results">
+                <h6 class="result-count">7 dealers</h6>
+            </div>
+            <div class="pro-filter">
+                <form action="">
+                    <p>Filter</p>
+                    <a href="#"><i class="fa fa-question" aria-hidden="true"></i></a>
+                    <label for="service-check">
+                        <input id="service-check" type="checkbox">
+                        Service
+                    </label>
+                    <label for="installation-check">
+                        <input id="installation-check" type="checkbox">
+                        Installation
+                    </label>
+                    <label for="residential-check">
+                        <input id="residential-check" type="checkbox">
+                        Residential
+                    </label>
+                    <label for="commercial-check">
+                        <input id="commercial-check" type="checkbox">
+                        Commercial
+                    </label>
+                </form>
+            </div>
+        </aside>
+        
+        <main id="content" class="main-content">
+            <div class="list-result">
+                <h4 class="pool-pro-name">Aqua Experts</h4>
+                <hr>
+                <h5 class="pool-pro-phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="mobile-call">Tap to call </span>1.888.888.8888</h5>
+                <p><em>Can't talk now?, Click below to send email.</em></p>
+                <a class="pro-email" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Contact This Pro</a>
+                <ol>
+                    <li><strong>Business Hours</strong></li>
+                    <li>Weekdays: 7:00am - 7:00pm</li>
+                    <li>Saturdays: 7:00am - 3:00pm</li>
+                    <li>Sundays: Closed</li>
+                </ol>
+                <div class="list-footer">
+                    <div class="left-type-service">
+                        <p><i class="fa fa-star" aria-hidden="true"></i> Installation Pro</p>
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Residential Pro</p>
+                    </div>
+                    <div class="right-type-service">
+                        <p><i class="fa fa-users" aria-hidden="true"></i> Service Pro</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of result 1 -->
+            <div class="list-result">
+                <h4 class="pool-pro-name">Premium Pools &amp; Spas of Charlotte</h4>
+                <hr>
+                <h5 class="pool-pro-phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="mobile-call">Tap to call </span>1.888.888.8888</h5>
+                <p><em>Can't talk now?, Click below to send email.</em></p>
+                <a class="pro-email" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Contact This Pro</a>
+                <ol>
+                    <li><strong>Business Hours</strong></li>
+                    <li>Weekdays: 7:00am - 7:00pm</li>
+                    <li>Saturdays: 7:00am - 3:00pm</li>
+                    <li>Sundays: Closed</li>
+                </ol>
+                <div class="list-footer">
+                    <div class="left-type-service">
+                        <p><i class="fa fa-star" aria-hidden="true"></i> Installation Pro</p>
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Residential Pro</p>
+                    </div>
+                    <div class="right-type-service">
+                        <p><i class="fa fa-users" aria-hidden="true"></i> Service Pro</p>
+                        <p><i class="fa fa-cog" aria-hidden="true"></i> Commercial Pro</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of result 2 -->
+            <div class="list-result">
+                <h4 class="pool-pro-name">Carolina Pool Specialist</h4>
+                <hr>
+                <h5 class="pool-pro-phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="mobile-call">Tap to call </span>1.888.888.8888</h5>
+                <p><em>Can't talk now?, Click below to send email.</em></p>
+                <a class="pro-email" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Contact This Pro</a>
+                <ol>
+                    <li><strong>Business Hours</strong></li>
+                    <li>Weekdays: 7:00am - 7:00pm</li>
+                    <li>Saturdays: 7:00am - 3:00pm</li>
+                    <li>Sundays: Closed</li>
+                </ol>
+                <div class="list-footer">
+                    <div class="left-type-service">
+                        <p><i class="fa fa-star" aria-hidden="true"></i> Installation Pro</p>
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Residential Pro</p>
+                    </div>
+                    <div class="right-type-service">
+                        <p><i class="fa fa-users" aria-hidden="true"></i> Service Pro</p>
+                        <p><i class="fa fa-cog" aria-hidden="true"></i> Commercial Pro</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of result 3 -->
+        </main>
+        
+        <footer class="colophon">
+            <div class="footer-base">
+                <img src="assets/pool-pros-logo-footer.png" alt="Pool Pros logo">
+                <div class="social">
+                    <ul>
+                        <li>connect with us</li>
+                        <li>
+                            <a aria-label="Facebook" type="button" class="tabbing-button" tabindex="-1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a aria-label="Twitter" type="button" class="tabbing-button" tabindex="-1"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a aria-label="YouTube" type="button" class="tabbing-button" tabindex="-1"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-links"><a href="#">2017 Pool Pros</a> <span>|</span> <a href="">Private Policy</a> <span>|</span> <a href="">Terms and Conditions</a></div>
+        </footer>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+/*--------------------------------------------------------------
+Media Query styles
+--------------------------------------------------------------*/
+@media screen and (max-width:639px){
+
+    .menu-icon {
+		display:inline-block;
+        cursor: pointer;
+	}
+    
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 0;
+		background: #fff;
+		border: 2.3px solid #46D6D6;
+		right: 0;
+		top: 60px;
+		border-radius: 4px;
+        z-index: 10;
+	}
+    
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+    
+	nav:hover ul {
+		display: block;
+	}
+    
+    .main-content {
+        padding: 1em .8em;
+    }
+    
+    .steps div{
+        border-bottom: 1px solid #E5E5E5;
+    }
+    
+    .steps div:last-child{
+        border-bottom: 0;
+    }
+    
+    .pool-pro-phone {
+        background-color: $secondary-brand-color;
+        border-radius: 4px;
+        color: #FFF;
+        padding: .3em;
+        margin: .5em;
+    }
+    
+    .fa-phone {
+        background-color: $brand-color;
+        border-radius: 3px;
+        color: #FFF;
+        padding: .3em;
+    }
+    
+    .mobile-call {
+        font-size: 12px;
+        color: #FFF;
+    }
+    .footer-base img {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:640px){
+    .main-nav button {
+        display: none;
+    }
+    
+    .hero{
+        /*background-image: url("../assets/hero-image.png");*/
+        min-height: 393px;
+    }
+    
+    .pool-pro-phone {
+        background-color: #FFF;
+        color: $text-color;
+        padding: .3em;
+        margin: .5em;
+    }
+    
+    .fa-phone {
+        background-color: $secondary-brand-color;
+        border-radius: 25px;
+        color: #FFF;
+        font-size: 20px;
+        padding: .3em;
+        margin-right: .5em;
+    }
+    
+    .mobile-call {
+        display: none;
+    }
+    
+    .footer-base img {
+        margin: 0;
+    }
+    
+    .footer-base img, .social {
+        display: inline-block;
+    }
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@supports (display: grid) {
+
+    .company-logo {
+        grid-area: logo;
+    }
+    
+    .pool-pro-form {
+        grid-area: form;
+    }
+    
+    .main-nav {
+        grid-area: nav
+    }
+    
+    .sidebar {
+        display: grid;
+        grid-template-columns: 35% auto;
+    }
+    
+    .list-footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;;
+    }    
+    
+    @media screen and (max-width: 639px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .masthead-subgrid {
+            display: grid;
+            grid-template-columns: 48.5% 37.5% 14%;
+            grid-template-areas: 
+                'logo form nav';
+        }
+        
+    }
+    
+    @media screen and (min-width: 640px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .masthead-subgrid {
+            display: grid;
+            grid-template-columns: 48.5% 37.5% 14%;
+            grid-template-areas: 
+                'logo nav form';
+        }
+        
+    }
+}

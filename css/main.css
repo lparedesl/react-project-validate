@@ -1,0 +1,620 @@
+/*--------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    text-decoration: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body {
+    color: #3f3f3f;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+}
+a,
+button,
+input,
+select,
+textarea {
+    color: #216DDF;
+    font-family: 'Open Sans','Helvetica', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+h1 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+h3 {
+    color: #083D8C;
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+img {
+    border-style: none;
+    vertical-align: middle;
+    display: block;
+}
+
+.pool-pro-form a {
+    border: 1.5px solid #083D8C;
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: .5em 0;
+    padding: .5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.pool-pro-form .fa-map-marker {
+    font-size: 22px;
+    margin-right: .2em;
+}
+
+.list-result .pool-pro-name {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 1em .5em;
+    line-height: normal;
+}
+
+.list-result .pool-pro-phone {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.list-result a.pro-email {
+    border: 1.5px solid #46D6D6;
+    border-radius: 3px;
+    display: inline-block;
+    margin: .5em 0;
+    padding: .5em 1em;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.list-result a.pro-email .fa-envelope {
+    padding-right: .6em
+}
+
+.list-result ol, .footer-base .social ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.list-result ol li {
+    margin-bottom: .4em;
+    font-weight: 300;
+}
+
+.left-type-service, .right-type-service {
+    text-align: left;
+    margin: 0 auto;
+    color: #9E9E9E;
+}
+
+.footer-base .social li{
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    padding: 0 1em;
+}
+
+.footer-base .social a{
+    color: #FFF;
+    font-family: 14px;
+    text-transform: uppercase;
+}
+
+.footer-bottom-links a {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.footer-bottom-links span {
+    padding: 0 1em;
+    color: #FFF;
+}
+
+/*--------------------------------------------------------------
+General styles
+--------------------------------------------------------------*/
+.masthead .company-logo {
+    margin: 1.5em 1em 0;
+}
+
+.masthead .pool-pro-form {
+    text-align: center;
+}
+
+.main-nav .menu-icon {
+	display: hidden;
+	width: 51px;
+	height: 51px;
+	background: url(../assets/menu-icon-mobile.png) center;
+    background-size: 50px;
+    position: relative;
+    top: 21px;
+}
+
+.main-nav a:hover#menu-icon {
+	background-color: #444;
+	border-radius: 4px;
+}
+
+.main-nav ul {
+	list-style: none;
+}
+
+.main-nav ul li {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+    background: #f6f6f6;
+    border-bottom: 2px solid #FFF;
+}
+
+.main-nav ul li:last-child {
+    border-bottom: 0;
+}
+
+.main-nav ul li a:hover, .main-nav ul li a:focus {
+    background: #F6F6F6;
+    border-top: 1px solid #216DDF;
+}
+
+.current {
+	color: #2262AD;
+}
+
+.hero {
+    background-image: url("../assets/Hero-image-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#FFF;
+}
+svg {
+    position: relative;
+    top: 13px;
+}
+.water-divide {
+    background-image: url("../assets/water-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#FFF;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.sidebar {
+    background-color: #f6f6f6;
+    padding: 2em;
+}
+
+.main-content {
+    padding: 1em 2em;
+}
+
+.list-result {
+    border: 1px solid #f6f6f6;
+    border-radius: 4px;
+    margin: 1em 0;
+    text-align: center;
+    -webkit-box-shadow: 0px 2px 5px 1px rgba(189,189,189,1);
+    -moz-box-shadow: 0px 2px 5px 1px rgba(189,189,189,1);
+    box-shadow: 0px 2px 5px 1px rgba(189,189,189,1);
+}
+
+.list-result hr {
+    border: 0;
+    height: 1px;
+    background: #e5e5e5;
+    width: 85%;
+}
+
+.list-footer{
+    background-color: #f6f6f6;
+    padding: 1em;
+}
+
+.footer-base {
+    background-color: #083D8C;
+    padding: 2em;
+}
+
+.footer-base img {
+    max-height: 52px;
+    margin: 1em 1em 0;
+    max-width: 376px;
+}
+
+.footer-base .social li{
+    display: inline-block;
+}
+
+.footer-bottom-links {
+    background-color: #216DDF;
+    text-align: center;
+    padding: 1em;
+}
+
+/*--------------------------------------------------------------
+Media Query styles
+--------------------------------------------------------------*/
+@media screen and (max-width:639px){
+
+    .menu-icon {
+		display:inline-block;
+        cursor: pointer;
+	}
+    
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 0;
+		background: #fff;
+		border: 2.3px solid #46D6D6;
+		right: 0;
+		top: 60px;
+		border-radius: 4px;
+        z-index: 10;
+	}
+    
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+    
+	nav:hover ul {
+		display: block;
+	}
+    
+    .main-content {
+        padding: 1em .8em;
+    }
+    
+    .steps div{
+        border-bottom: 1px solid #E5E5E5;
+    }
+    
+    .steps div:last-child{
+        border-bottom: 0;
+    }
+    
+    .pool-pro-phone {
+        background-color: #216DDF;
+        border-radius: 4px;
+        color: #FFF;
+        padding: .3em;
+        margin: .5em;
+    }
+    
+    .fa-phone {
+        background-color: #083D8C;
+        border-radius: 3px;
+        color: #FFF;
+        padding: .3em;
+    }
+    
+    .mobile-call {
+        font-size: 12px;
+        color: #FFF;
+    }
+    .footer-base img {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:640px){
+    .main-nav button {
+        display: none;
+    }
+    
+    .hero{
+        background-image: url("../assets/hero-image.png");
+        min-height: 393px;
+    }
+    
+    .pool-pro-phone {
+        background-color: #FFF;
+        color: #3f3f3f;
+        padding: .3em;
+        margin: .5em;
+    }
+    
+    .fa-phone {
+        background-color: #216DDF;
+        border-radius: 25px;
+        color: #FFF;
+        font-size: 20px;
+        padding: .3em;
+        margin-right: .5em;
+    }
+    
+    .mobile-call {
+        display: none;
+    }
+    
+    .footer-base img {
+        margin: 0;
+    }
+    
+    .footer-base img, .social {
+        display: inline-block;
+    }
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@supports (display: grid) {
+
+    .company-logo {
+        grid-area: logo;
+    }
+    
+    .pool-pro-form {
+        grid-area: form;
+    }
+    
+    .main-nav {
+        grid-area: nav
+    }
+    
+    .sidebar {
+        display: grid;
+        grid-template-columns: 35% auto;
+    }
+    
+    .list-footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;;
+    }    
+    
+    @media screen and (max-width: 639px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .masthead-subgrid {
+            display: grid;
+            grid-template-columns: 48.5% 37.5% 14%;
+            grid-template-areas: 
+                'logo form nav';
+        }
+        
+    }
+    
+    @media screen and (min-width: 640px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .masthead-subgrid {
+            display: grid;
+            grid-template-columns: 48.5% 37.5% 14%;
+            grid-template-areas: 
+                'logo nav form';
+        }
+        
+    }
+}
+
+
+
+DELETE After
+
+/*--------------------------------------------------------------
+General styles
+--------------------------------------------------------------*/
+
+.masthead {
+    padding: 2em;
+    text-align: center;
+}
+
+.banner {
+    text-align: center;
+}
+
+.steps{
+    text-align: left;
+}
+.steps h3 {
+    display: inline-block;
+}
+
+.main-content {
+    background-color: cornsilk;
+    padding: 10em;
+}
+
+.sidebar {
+    background-color: #083D8C;
+    padding: 2em;
+}
+
+.colophon {
+    background-color: #216DDF;
+	color: white;
+    padding: 1em 2em;
+}
+
+.short-divider{
+    border: 0;
+    height: 1px;
+    background: #FFF;
+    width: 3em;
+}
+
+/*--------------------------------------------------------------
+Media Query styles
+--------------------------------------------------------------*/
+@media screen and (min-width:375px){
+    .steps div{
+        border-bottom: 1px solid #E5E5E5;
+    }
+    .steps div:last-child{
+        border-bottom: 0;
+    }
+}
+
+@media screen and (min-width:800px){
+    .hero{
+        background-image: url("../assets/hero-image.png");
+        min-height: 393px;
+    }
+    .steps div{
+        border-bottom: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+
+@supports not (display: grid) {
+    .page-title,
+    .main-content,
+    .sidebar {
+        max-width: 50em;
+        margin: 0 auto;
+    }
+}
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@supports (display: grid) {
+    @media screen and (min-width: 375px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header" 
+                "content-head"
+                "main"
+                "sidebar"
+                "footer";
+        }
+        .masthead {
+            grid-area: header;
+        }
+        .masthead-subgrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+                'logo form nav';
+        }
+        .company-logo {
+            grid-area: logo;
+        }
+        .pool-pro-form {
+            grid-area: form;
+        }
+        .main-nav{
+            grid-area: nav;
+        }
+        .banner {
+            grid-area: content-head;
+        }
+        .banner-subgrid{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "hero"
+                "steps";
+        }
+        .steps-subgrid{
+            display: grid;
+            grid-row-gap: 10px;
+        }
+        .main-content {
+            grid-area: main;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .colophon {
+            grid-area: footer;
+        }
+  
+    }
+    
+    @media screen and (min-width:800px){
+        .steps-subgrid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        
+    }

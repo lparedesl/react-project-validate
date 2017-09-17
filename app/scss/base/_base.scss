@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+General styles
+--------------------------------------------------------------*/
+.masthead {
+    .company-logo{
+        margin: 1.5em 1em 0;
+    }
+    .pool-pro-form {
+        text-align: center;
+    }
+}
+
+.main-nav {
+    .menu-icon {
+        /*background: url(../assets/menu-icon-mobile.png) center;*/
+        background-size: 50px;
+        display: hidden;
+        height: 51px;
+        position: relative;
+        top: 21px;
+        width: 51px;
+    }
+    a:hover#menu-icon {
+    	background-color: $dark-grey;
+	    border-radius: border-radius(4px);
+    }
+    ul {
+        list-style: none;
+        
+        li {
+            display: inline-block;
+            float: left;
+            padding: 10px;
+            background: $light-grey;
+            border-bottom: 2px solid #FFF;
+        }
+        li:last-child {
+            border-bottom: 0;
+            
+            a:hover, a:focus {
+                background: $light-grey;
+                border-top: 1px solid $brand-color;
+            }
+            .current {
+                color: $brand-color;
+            }
+        }
+    }
+}
+.banner {
+    .hero {
+        /*background-image: url("../assets/Hero-image-mobile.png");*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:#FFF;
+    }
+    .steps {
+        svg {
+            position: relative;
+            top: 13px;
+        }
+        .water-divide {
+            /*background-image: url("../assets/water-image.png");*/
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:#FFF;
+            min-height: 100px;
+            max-height: 200px;
+        }
+    }
+}
+.sidebar {
+    background-color: $light-grey;
+    padding: 2em;
+}
+.main-content {
+    padding: 1em 2em;
+    
+    .list-result {
+        border: 1px solid $light-grey;
+        border-radius: border-radius(4px);
+        margin: 1em 0;
+        text-align: center;
+        box-shadow: box-shadow(0px 2px 5px 1px rgba(189,189,189,1));
+        
+        hr{
+            border: 0;
+            height: 1px;
+            background: #e5e5e5;
+            width: 85%;
+        }
+        .list-footer {
+            background-color: $light-grey;
+            padding: 1em;
+        }
+    }
+}
+.colophon {
+    .footer-base {
+        background-color: $brand-color;
+        padding: 2em;
+        
+        img {
+            max-height: 52px;
+            margin: 1em 1em 0;
+            max-width: 376px;
+        }
+        
+        .social {
+            li {
+                display: inline-block;
+            }
+        }
+    }
+    .footer-bottom-links {
+        background-color: $secondary-brand-color;
+        text-align: center;
+        padding: 1em;
+    }
+}
